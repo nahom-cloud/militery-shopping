@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="x-icon" href="logo.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Payment</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="army.css">
+
+  <style>
+    .payment-container {
+      max-width: 450px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    .payment-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1f2933;
+    }
+
+    .payment-container label {
+      display: block;
+      margin: 12px 0 5px;
+      font-weight: bold;
+    }
+
+    .payment-container input,
+    .payment-container select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .payment-methods {
+      margin: 15px 0;
+    }
+
+    .payment-methods label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+
+    .pay-btn {
+      width: 100%;
+      background: #1f2933;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .pay-btn:hover {
+      background: #f59e0b;
+      color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="payment-container">
+    <h2>Payment Method</h2>
+
+    <form action="#" method="post">
+
+      <!-- Full Name -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <!-- Email -->
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <!-- Payment Method -->
+      <label>
+        Payment Method
+            <select name="payment" id="payment" required autocomplete="method">
+              <option value="">master Card</option>
+              <option value="paypal">paypal</option>
+              <option value="visa">visa</option>
+                <option value="american express">american express</option>
+            </select>
+          </label>
+       
+        
+      </div>
+
+      <!-- Card Number -->
+      <label for="card">Card Number</label>
+      <input type="text" id="card" placeholder="1234 5678 9012 3456">
+
+      <!-- Expiry & CVV -->
+      <label for="expiry">Expiry Date</label>
+      <input type="month" id="expiry">
+
+      <label for="cvv">CVV</label>
+      <input type="password" id="cvv" placeholder="123">
+
+      <!-- Submit -->
+      <button type="submit" class="pay-btn">Confirm Payment</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
